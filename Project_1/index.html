@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mỹ Phẩm - Cosmetics Nature Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- HEADER (Contains Search & Cart Toggle) -->
+    <header class="header">
+        <div class="logo-area">
+            <span class="heart-icon" aria-hidden="true"></span>
+            <span class="logo-text">MỸ PHẨM</span>
+        </div>
+
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm mỹ phẩm...">
+            </div>
+
+            <div class="sort-box">
+                <select id="sortSelect">
+                    <option value="default">Sắp xếp</option>
+                    <option value="price-asc">Giá: Thấp đến Cao</option>
+                    <option value="price-desc">Giá: Cao đến Thấp</option>
+                </select>
+            </div>
+
+            <button id="cartBtn" class="cart-btn">
+                🛒 Giỏ hàng (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <ul id="categoryList" class="category-list">
+                <!-- Categories rendered by JS -->
+            </ul>
+        </aside>
+
+        <!-- PRODUCT GRID AREA -->
+        <section class="products-section">
+            <div id="productGrid" class="product-grid">
+                <!-- Products rendered by JS -->
+            </div>
+
+            <div id="noProductsMessage" class="no-products" style="display: none;">
+                Không tìm thấy sản phẩm nào.
+            </div>
+        </section>
+
+        <!-- RIGHT BANNER -->
+        <aside class="banner-section">
+            <div class="banner">
+                <img src="images/products/tabs_2_slider_img_3.jpg" alt="Cosmetics Nature Products">
+                <div class="banner-text">
+                    <h2>Cosmetics</h2>
+                    <p>Nature Products</p>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- BRANDS SECTION -->
+    <section class="brands-section">
+        <div id="brandGrid" class="brand-grid">
+            <!-- Brands rendered by JS -->
+        </div>
+    </section>
+
+    <!-- CART MODAL -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Giỏ Hàng</h2>
+                <span class="close-btn" id="closeCartBtn">&times;</span>
+            </div>
+            <div class="modal-body" id="cartBody">
+                <!-- Cart items rendered by JS -->
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    Tổng tiền: <span id="cartTotalPrice">0đ</span>
+                </div>
+                <button class="checkout-btn">Thanh Toán</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div id="productModal" class="modal">
+        <div class="modal-content product-detail-content">
+            <span class="close-btn" id="closeProductBtn">&times;</span>
+            <div id="productDetailBody" class="product-detail-body">
+                <!-- Product details rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
